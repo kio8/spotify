@@ -1,40 +1,41 @@
-import { BurnaBoy, davido, jcole, nas, tatu } from "../images";
-
+import { davido, jcole, nas, tatu } from "../images";
+// import { damini } from "../images";
+import damini from "../images/damini.jpg";
 const playlist = [
   {
     id: 1,
     genre: "Hip Hop",
-    artist: "J cole",
+    name: "J cole",
     title: " born sinner  ",
-    image: "",
+    image: jcole,
   },
   {
     id: 2,
     genre: "afro-beats",
-    artist: "Burnaboy",
+    name: "Burnaboy",
     title: " Last Last ",
-    image: "",
+    image: damini,
   },
   {
     id: 3,
     genre: "Rock",
-    artist: "Tatu",
+    name: "",
     title: " All the things she said  ",
-    image: "",
+    image: tatu,
   },
   {
     id: 4,
     genre: "Hip hop",
-    artist: "Nas",
+    name: "Nas",
     title: " Ether ",
-    image: "",
+    image: nas,
   },
   {
     id: 5,
     genre: "Afro-beats",
-    artist: "Davido",
+    name: "Davido",
     title: " fem",
-    image: "",
+    image: davido,
   },
 ];
 export { playlist };

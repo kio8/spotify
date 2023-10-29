@@ -5,8 +5,8 @@ import Playlist from "./Playlist";
 
 function App() {
   return (
-    // <LoginPage />
-    <Playlist />
+    <LoginPage />
+    // <Playlist />
   );
 }
 

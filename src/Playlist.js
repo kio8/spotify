@@ -3,15 +3,17 @@ import React from "react";
 import { useState } from "react";
 import fem from "./music/fem.mp3";
 import "./App.css";
+import { playlist } from "./constants/index";
 
 function Playlist(e) {
   function handleClick(e) {
     e.preventDefault();
+    console.log();
 
     //
   }
   // const [playlist, setPlaylist] = useState([
-  
+
   // ]);
   return (
     <div
@@ -19,114 +21,64 @@ function Playlist(e) {
       style={{
         backgroundColor: "#121212",
         height: "100vh",
-        marginTop: "0px",
+        marginTop: 0,
       }}
     >
       <div
-        className=""
         style={{
+          flexWrap: "wrap",
           display: "flex",
-          alignContent: "center",
-          justifyContent: "space-around",
-          // marginTop: "5px",
-          backgroundColor: "white",
+          gap: 20,
+          paddingTop: 20,
+          marginLeft: 20,
         }}
       >
         {playlist.map((artists) => (
-          <main
+          <div
             style={{
-              marginBottom: 10,
-              paddingLeft: 30,
-              display: "flex",
+              backgroundColor: "#181818",
+              padding: 4,
+              borderRadius: "0.5rem",
             }}
+            key={artists.id}
           >
-            <div style={{ marginTop: "10px" }}>
-              {artists.artist === "Davido" ? (
-                <img
-                  src={require("./images/davido.jpg")}
-                  // className="filter: drop-shadow(20px 10px 4px black);"
-                  style={{
-                    height: 100,
-                    width: 100,
-                    border: "solid thin black",
-                    borderRadius: "50%",
-                  }}
-                />
-              ) : artists.artist === "Burnaboy" ? (
-                <img
-                  src={require("./images/BurnaBoy .jpg")}
-                  style={{
-                    height: 100,
-                    width: 100,
-                    border: "solid thin black",
-                    borderRadius: "50%",
-                  }}
-                />
-              ) : artists.artist === "J cole" ? (
-                <img
-                  src={require("./images/jcole.jpg")}
-                  // className="image-shadow"
-                  style={{
-                    height: 100,
-                    width: 100,
-                    border: "solid thin black",
-                    borderRadius: "50%",
-                  }}
-                />
-              ) : artists.artist === "Nas" ? (
-                <img
-                  src={require("./images/nas.jpg")}
-                  style={{
-                    height: 100,
-                    width: 100,
-                    // border: "solid thin black",
-                    borderRadius: "50%",
-                  }}
-                />
-              ) : artists.artist === "Tatu" ? (
-                <img
-                  src={require("./images/tatu.jpg")}
-                  style={{
-                    height: 100,
-                    width: 100,
-                    border: "solid thin black",
-                    borderRadius: "50%",
-                  }}
-                  alt="nas"
-                />
-              ) : (
-                <button> Upload PIcs</button>
-              )}
-              <div
-                className=""
+            <div
+              style={{
+                position: "relative",
+                width: "200px",
+                height: "250px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: -20,
+              }}
+            >
+              <img
+                src={artists.image}
                 style={{
-                  marginTop: "10px",
-                  alignItems: "center",
-                  color: "black",
+                  height: "180px",
+                  width: "85%",
+                  objectFit: "cover",
+                  borderRadius: "3%",
+                  marginBottom: 5,
                 }}
-              >
-                <p> {artists.artist}</p>
-                <p> {artists.title}</p>
-                <h3> {artists.genre}</h3>
-              </div>
-
-              <div>
-                {" "}
-                <button
-                  onClick={handleClick}
-                  style={{
-                    backgroundColor: "#191414",
-                    width: "100px",
-                    borderRadius: "5px",
-                    color: "whitesmoke",
-                  }}
-                >
-                  {" "}
-                  Play Music
-                </button>
-              </div>
+              />
             </div>
-          </main>
+            <div
+              style={{
+                marginBottom: 30,
+                marginTop: -20,
+                marginLeft: 10,
+              }}
+            >
+              <h4 style={{ color: "white", marginBottom: 3 }}>
+                {artists.title}
+              </h4>
+              <p style={{ color: "#A7A7A7" }}>
+                {artists.name === "" ? "artist" : artists.name}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
     </div>

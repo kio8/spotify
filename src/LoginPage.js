@@ -14,6 +14,7 @@ function LoginPage() {
   function handlesignup() {
     if (form !== "signup") {
       setForm("signup");
+      console.log(email);
     }
   }
 
@@ -23,11 +24,10 @@ function LoginPage() {
     if (form !== "signin") {
       setForm("signin");
     }
- if( email !== '' && password !== ''){
-    console.log(email)
-    console.log(password)
- }
-
+    if (email !== "" && password !== "") {
+      console.log(email);
+      console.log(password);
+    }
   }
   // const[ signup , setSignup]= useState(false)
   return (
@@ -73,7 +73,7 @@ function LoginPage() {
                     borderRadius: "20px",
                     textSize: 20,
                     outline: "none",
-                    backgroundColor: "gray",
+                    backgroundColor: "white",
                   }}
                   onChange={(event) => setEmail(event.target.value)}
                 />
@@ -90,7 +90,7 @@ function LoginPage() {
                     borderRadius: "20px",
                     textSize: 20,
                     outline: "none",
-                    backgroundColor: "gray",
+                    backgroundColor: "white",
                   }}
                   onChange={(event) => setPassword(event.target.value)}
                 />
@@ -106,7 +106,7 @@ function LoginPage() {
                     borderRadius: "20px",
                     textSize: 20,
                     outline: "none",
-                    backgroundColor: "gray",
+                    backgroundColor: "white",
                   }}
                 />
               </form>
@@ -125,12 +125,12 @@ function LoginPage() {
                     borderRadius: "20px",
                     textSize: 20,
                     outline: "none",
-                    backgroundColor: "red",
+                    backgroundColor: "white",
                   }}
                 />
 
                 <input
-                  id="Email"
+                  id="Password"
                   type="Password"
                   placeholder="Password"
                   style={{
@@ -141,7 +141,7 @@ function LoginPage() {
                     borderRadius: "20px",
                     textSize: 20,
                     outline: "none",
-                    backgroundColor: "red",
+                    backgroundColor: "white",
                   }}
                 />
               </form>
